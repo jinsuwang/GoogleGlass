@@ -1,6 +1,7 @@
 import time
 import datetime
 import logging
+from Queue import Queue
 # logging.setLevel(logging.DEBUG)
 
 class GoogleMapsClient(object):
@@ -56,6 +57,28 @@ class MyRequestNoBurst(object):
         return self.client.make_request()
 
 
+class RateLimitWithQuery:
+
+    qps = None
+    queue = None
+
+    def set_qps(self, qps):
+        self.qps = qps
+        self.queue = Queue()
+
+    def allow_request(self):
+        if not self.qps or self.qps <= 0:
+            return False
+        now = time.now()
+        while( now - queue.peek() > 1000 ){
+            queries.pop()
+        }
+        if len(queue) < qps:
+            queue.add(now)
+            return True
+        return False 
+
+
 class MyRequestSlidingWindow(object):
     def __init__(self, window_period):
         self.client = GoogleMapsClient()
@@ -63,13 +86,6 @@ class MyRequestSlidingWindow(object):
         
     def make_request(self):
         pass
-
-
-mq = MyRequest(10)
-for i in range(20):
-    mq.make_request()
-
-
 
 
 
