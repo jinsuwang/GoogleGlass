@@ -18,7 +18,7 @@ public class SearchA2DMatrix {
         int left = 0;
         int right = rows * cols - 1;
         
-        while( left < right ){
+        while( left+1 < right ){
             int mid = left + ( right - left ) / 2; 
             int val = matrix[mid / cols][mid % cols]; 
             if( val == target ) right = mid;
@@ -32,4 +32,5 @@ public class SearchA2DMatrix {
         if(  matrix[right / cols][right % cols] == target ) return true;
         return false;
     }
+    
 }
