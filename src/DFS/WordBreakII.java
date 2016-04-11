@@ -37,10 +37,10 @@ public class WordBreakII {
                 }else{
                     String prefix = s.substring(len);
                     ArrayList<String> tmp = wordBreakHelper(prefix, dict, memo);
-                    for(String item:tmp){
-                        item = subfix + " " + item;
-                        result.add(item);
-                    }
+//                    for(String item:tmp){
+//                        item = subfix + " " + item;
+//                        result.add(item);
+//                    }
                 }
             }
         }
@@ -59,6 +59,8 @@ public class WordBreakII {
         set.add("dog");
         
         ArrayList<String> ret = wordBreak(s, set);
+//          String s = "abcd";
+//          System.out.println(s.substring(1));
    
     }
 }

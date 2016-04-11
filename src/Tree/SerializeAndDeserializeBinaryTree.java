@@ -38,16 +38,17 @@ public class SerializeAndDeserializeBinaryTree {
     }
 
     // Decodes your encoded data to tree.
-    public TreeNode deserialize(String data) {
+    public static TreeNode deserialize(String data) {
         Queue<String> queue = new LinkedList<String>();
-        queue.addAll(Arrays.asList(data.split(",")));
+        queue.addAll(Arrays.asList(data.split(",")));        
+//        System.out.println(queue.toString());
         TreeNode root = buildTree(queue);
         return root;
     }
     
-    private TreeNode buildTree(Queue<String> queue) {
+    private static TreeNode buildTree(Queue<String> queue) {
         String val = queue.poll();
-        if( val == "#" ) return null;
+        if( val.equals("#") ) return null;
         else{
             TreeNode node = new TreeNode(Integer.valueOf(val));
             node.left = buildTree(queue);
@@ -57,10 +58,14 @@ public class SerializeAndDeserializeBinaryTree {
     }
     public static void main(String[] args) {
         TreeNode root = TestTree.getTestTree();
-        String ret = serialize(root);
-        System.out.println(ret);
+        String serialized_tree = serialize(root);
+        System.out.println(serialized_tree);
+        
+        TreeNode newRoot = deserialize( serialized_tree ); 
+        
+        // print tree.
         TreeTraversal tt = new TreeTraversal();
-        List<Integer> list = tt.inOrderTraversal(root);
+        List<Integer> list = tt.inOrderTraversal(newRoot);
         System.out.println(list.toString());
         
     }    

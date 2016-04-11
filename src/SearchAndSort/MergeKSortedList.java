@@ -6,6 +6,8 @@
 package SearchAndSort;
 
 import LinkedList.ListNode;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -43,5 +45,10 @@ public class MergeKSortedList {
         else curr.next = n1;
         return dummy.next;
     }   
+    
+    public static void main(String[] args) {
+        int[] test = {1,2,3,4};
+            Set<Integer> set = new HashSet<Integer>();
+    }
     
 }

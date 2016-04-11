@@ -13,7 +13,56 @@ import java.util.Arrays;
  * @author Sam
  */
 public class SortColor {
+
+    public enum Color {
+        RED(0),
+        GREEN(1),
+        BLUE(2);
+        private int value;
+        Color(int x){
+            this.value = x;
+        }
+    }
     
+    public static void sortColors( Color[] colors ){
+        if( colors == null || colors.length <= 1 ) return;
+        int indexRed = 0;
+        int indexBlue = colors.length - 1 ;
+        int curr = 0; 
+        while( curr <= indexBlue ){
+            if( colors[curr] == Color.RED ){
+                swap( colors, curr++, indexRed++ );
+            }else if( colors[curr] == Color.BLUE ){
+                swap( colors, curr, indexBlue-- );
+            }else{
+                curr++;
+            }
+        }
+    }
+    
+    private static void swap(Color[] colors, int i, int j) {
+        Color tmp = colors[i];
+        colors[i] = colors[j];
+        colors[j] = tmp;
+    }
+   
+    
+        
+    public static void main(String[] args) {
+        Color[] colors = new Color[]{ Color.GREEN, Color.RED, Color.BLUE, Color.BLUE, Color.GREEN};
+        for( int i = 0; i < colors.length; i++ ){
+            System.out.print( colors[i].value + "\t");
+        }
+        System.out.println("\n");
+        sortColors( colors );
+        for( int i = 0; i < colors.length; i++ ){
+            System.out.print( colors[i].value + "\t");
+        }
+        
+    }
+  
+            
+            
     public static void sortColors(int[] nums) {
         if( nums == null || nums.length < 2) return;
         int index_0 = 0;
@@ -38,6 +87,11 @@ public class SortColor {
         nums[index_2] = nums[index_0];
         nums[index_0] = tmp;
     }
+    
+    
+    
+    
+    
     
     /*
        N, bucket sort.
@@ -82,20 +136,5 @@ public class SortColor {
                 cnt--;
             }
         }
-    }
-    
-
-    
-    
-    
-    
-    public static void main(String[] args) {
-        int[] test = { 1,2,3,4,5,6,2,0 };
-        int[] test2 = { 0,0 };
-
-//        sortColors( test );
-        int a = 5;
-        while( a >= 0 )
-            System.out.println(test[a--]);
     }
 }

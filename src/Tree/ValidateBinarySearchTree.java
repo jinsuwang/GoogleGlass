@@ -27,5 +27,29 @@ public class ValidateBinarySearchTree {
             }
         }
         return true;
-    }   
+    }  
+    
+    
+    
+    public boolean isValidBST2(TreeNode root) {
+        TreeNode curr = root;
+        TreeNode prev = null;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while( !stack.isEmpty() || root != null ){
+            if( curr != null ){
+                stack.push( curr );
+                curr = curr.left;
+            }else{
+                curr = stack.pop();
+                if( prev != null && curr.val <= prev.val ) return false; 
+                prev = curr;
+                curr = curr.right;
+            }
+        }
+        return true;
+    }
+    
+    
+    
 }
+

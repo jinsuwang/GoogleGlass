@@ -5,6 +5,7 @@
  */
 package PocketGem;
 
+import Tree.TestTree;
 import Tree.TreeNode;
 
 /**
@@ -12,7 +13,7 @@ import Tree.TreeNode;
  * @author Sam
  */
 public class InorderSuccessorInBST {
-    public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+    public static TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         TreeNode successor = null;
         while( root != null && root.val != p.val ){
             // move to left one to find smaller;
@@ -34,5 +35,29 @@ public class InorderSuccessorInBST {
             root = root.left;
         }
         return root;
+    }
+    
+    public static TreeNode nextNode(TreeNode node){
+            if (node.right != null) {
+                TreeNode curr = node.right;
+                while (curr.left != null) {
+                    curr = curr.left;
+                }
+                return curr;
+            }else {
+                TreeNode curr = node;
+                // make sure you are not right node.
+                while (curr.parent != null && curr == curr.parent.right) {
+                    curr = curr.parent;
+                }
+                return curr.parent;
+            } 
+    }
+    
+    public static void main(String[] args) {
+        TreeNode root = TestTree.getTestTree();
+        TreeNode node = root.left;
+        TreeNode ret = inorderSuccessor( root , node );
+        System.out.println(ret.val);
     }
 }

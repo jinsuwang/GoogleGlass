@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package DesignPattern;
+import static java.lang.System.identityHashCode;
 
 /**
  *
@@ -13,6 +14,10 @@ public class Singleton {
     
     private static Singleton uniqueInstance = null;
     
+    private Singleton(){
+        System.out.println("Create new Instance.");
+    }
+        
     public static Singleton getInstance(){
         if(uniqueInstance == null){
             uniqueInstance = new Singleton();
@@ -20,5 +25,10 @@ public class Singleton {
         return uniqueInstance;
     }
     
-    
+    public static void main(String[] args) {
+        Singleton s1 = Singleton.getInstance();
+        Singleton s2 = Singleton.getInstance();
+        System.out.println(identityHashCode(s1));
+        System.out.println(identityHashCode(s2));
+    }
 }
