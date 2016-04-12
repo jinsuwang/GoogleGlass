@@ -1,4 +1,4 @@
-package PocketGem;
+package TwoPointer;
 
 import java.util.Arrays;
 
