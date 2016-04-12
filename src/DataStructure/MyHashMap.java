@@ -84,4 +84,13 @@ public class MyHashMap<K,V> {
     private int getIndexForKey(K key){
         return Math.abs(key.hashCode() % arr.size());
     }
+    
+    // time a prime number
+    private int goodHash(){
+        int hash = 7;
+        for (int i = 0; i < strlen; i++) {
+            hash = hash*31 + charAt(i);
+        }
+        return hash;
+    }
 }
