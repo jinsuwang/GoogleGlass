@@ -11,15 +11,31 @@ package SearchAndSort;
  */
 public class Pow {
     
-    public static double myPow(double x, int n) {
-        if ( n < 0 ) return 1.0/myPow( x, -n );
+    public static double myPow2(double x, int n) {
+        if ( n < 0 ) return 1.0/myPow2( x, -n );
         if( n == 0 ) return 1;
         if( n == 1 ) return x;
-        if( n % 2 == 0 ) return myPow(x, n/2) * myPow( x, n/2 );
-        return myPow(x, n/2) * myPow( x, n/2 )* x;
+        if( n % 2 == 0 ) return myPow2(x, n/2) * myPow2( x, n/2 );
+        return myPow2(x, n/2) * myPow2( x, n/2 )* x;
+    }
+    
+    public static double myPow( double x, int n ){
+        
+        if (n < 0) {
+            double ret = x * myPow(x, -(n + 1));
+            return 1.0/ret;
+        }        
+        
+        if( n == 0 ) return 1;
+        if( n == 1 ) return x;
+        
+        double part = myPow( x, n/2);
+
+        if( n % 2 == 0)  return part * part;
+        else             return part * part * x;
     }
     
     public static void main(String[] args) {
-        System.out.println(myPow(3,1));
+        System.out.println(myPow(3,-2));
     }
 }
