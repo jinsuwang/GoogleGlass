@@ -10,22 +10,29 @@ package DP;
  * @author Sam
  */
 public class BackpackII {
-    public int backPack(int capacity, int[] goods, int[] value ) {
+    public static int backPackII(int m, int[] A, int[] V ) {
         // write your code here
-        int[][] values = new int[goods.length+1][ capacity+1 ];
-        for(int i = 0; i <= goods.length ; i++ ){
-            for( int j = 0; j <= capacity; j++ ){
+        int[][] dp = new int[A.length+1][m+1];
+        for(int i = 0; i <= A.length ; i++ ){
+            for( int j = 0; j <= m; j++ ){
                 if( j == 0 || i == 0){
-                    values[i][j] = 0;
-                }else if( goods[i-1] > j ){
-                    values[i][j] = values[i-1][j]; 
+                    dp[i][j] = 0;
+                }else if( A[i-1] > j ){
+                    dp[i][j] = dp[i-1][j]; 
                 }else{
                     // take it or not take it.
-                    values[i][j] = Math.max(values[i-1][j], values[i-1][j-goods[i-1]] + value[i] ); 
-                    
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j-A[i-1]] + V[i-1] ); 
                 }
             }
         }
-        return values[goods.length][capacity];
+        return dp[A.length][m];
     }    
+    
+    public static void main(String[] args) {
+        int[] A = { 77, 22, 29, 50, 99 };
+        int[] V = { 92, 22, 87, 46, 90 };
+        int m = 100;
+        
+        System.out.println(backPackII( m, A, V ));
+    }
 }
