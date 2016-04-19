@@ -29,13 +29,13 @@ public class TestTree {
     } 
     
     public static TreeNode getTestTree2(){
-        TreeNode n1 = new TreeNode(3);
+        TreeNode n1 = new TreeNode(1);
         TreeNode n2 = new TreeNode(2);
-        TreeNode n3 = new TreeNode(4);
-        TreeNode n4 = new TreeNode(1);
-        TreeNode n5 = new TreeNode(4);
-        TreeNode n6 = new TreeNode(2);
-        TreeNode n7 = new TreeNode(3);
+        TreeNode n3 = new TreeNode(3);
+        TreeNode n4 = new TreeNode(4);
+        TreeNode n5 = new TreeNode(5);
+        TreeNode n6 = new TreeNode(6);
+        TreeNode n7 = new TreeNode(7);
         n4.left = n2;
         n2.left = n1;
         n2.right = n3;
