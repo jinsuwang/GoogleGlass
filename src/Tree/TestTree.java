@@ -27,4 +27,21 @@ public class TestTree {
         n6.right = n7;
         return n4;
     } 
+    
+    public static TreeNode getTestTree2(){
+        TreeNode n1 = new TreeNode(3);
+        TreeNode n2 = new TreeNode(2);
+        TreeNode n3 = new TreeNode(4);
+        TreeNode n4 = new TreeNode(1);
+        TreeNode n5 = new TreeNode(4);
+        TreeNode n6 = new TreeNode(2);
+        TreeNode n7 = new TreeNode(3);
+        n4.left = n2;
+        n2.left = n1;
+        n2.right = n3;
+        n4.right = n6;
+        n6.left = n5;
+        n6.right = n7;
+        return n4;
+    }
 }
