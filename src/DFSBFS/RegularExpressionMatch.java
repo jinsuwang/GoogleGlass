@@ -11,13 +11,25 @@ package DFSBFS;
  */
 public class RegularExpressionMatch {
     
-    /*
-        basic knowledge about regular expression.
-        
-        . --- 匹配除“\n”之外的任何单个字符。若要匹配包括“\n”在内的任意字符，请使用诸如“[\s\S]”之类的模式。
-        * --- 零次或多次匹配前面的字符或子表达式。例如，zo* 匹配“z”和“zoo”。* 等效于 {0,}。
-    */
     
+    /*
+    
+    
+    - RE is typical divide and conquer question.in each sub-problem, we do the same stuff.
+    
+    - check string have been consumed, if yes, check the rest pattern of could mean empty.
+    - check pattern is empty, if string is not empty but pattern is empty, return false.
+    - get current char, current pattern char and next pattern char
+    - if next pattern char is *
+        - if current string char matched, jump to next string char or remove current pattern
+        - else remove current pattern
+    - if next pattern is not char:
+        - if current string char matched, both move one char.
+        - if not match, return false.
+    
+    
+    
+    */
     
     
     
