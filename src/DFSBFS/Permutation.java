@@ -37,11 +37,50 @@ public class Permutation {
         }
     }    
     
-    public static void main(String[] args) {
-        int[] a = {1,2,3};
-        List<List<Integer>> sol = permute(a);
-        for( List<Integer> e : sol ){
-            System.out.println(e.toString());
+    
+   public static String findsentence( String s ){
+    
+    if(s == null || s.length() == 0 ) return s;
+    
+    StringBuffer sb = new StringBuffer();
+    
+    int left = 0;
+    int right = s.length()-1;
+    
+    // find first non space char from left.
+    while( left <= right ){
+        if( s.charAt(left) == ' '){
+            left++;
+        }else{
+            break;
         }
+    }
+    
+    while( right >= left ){
+        if( s.charAt(right) == ' '){
+            right--;
+        }else{
+            break;
+        }
+    }
+    
+    // start add new substring.
+    int prev = left;
+    while( left <= right ){
+        if( s.charAt(left) == ' ' ){
+            if( left>0 && s.charAt(left-1)  != ' ' ){
+                sb.append(" "); // add space for normal sentence.
+            }
+        }else{
+            sb.append( s.charAt(left) );
+        }
+        left++;
+    }
+    return sb.toString();
+}
+    
+   
+    public static void main(String[] args) {
+        String s = "   a    bc dddd     ";
     }
 }
