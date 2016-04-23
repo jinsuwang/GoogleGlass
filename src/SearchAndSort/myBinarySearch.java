@@ -41,7 +41,7 @@ public class myBinarySearch {
             }
         }    
         if( arr[right] == val ) return right;
-        if( arr[left] == val ) return left; // always return left most 
+        if( arr[left] == val ) return left; // always return right most 
 
         return -1;
     }

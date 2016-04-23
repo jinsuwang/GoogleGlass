@@ -40,8 +40,9 @@ public class RobHouse {
     public static void main(String[] args) {
         int[] test =  {  2 ,3, 2, 4, 6, 8 };
         System.out.println(findMaximumValue( test ));
-        
     }
+    
+    
 }
     
 

@@ -10,7 +10,7 @@ package LinkedList;
  * @author Sam
  */
 public class SwapNodesinPairs {
-    public ListNode swapPairs(ListNode head) {
+    public static ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode curr = dummy;
@@ -22,10 +22,16 @@ public class SwapNodesinPairs {
             n1.next = n2.next;
             n2.next = n1;
             
-            head = n1;
+            curr = n1;
 
         }
         return dummy.next;
-
     } 
+    
+    public static void main(String[] args) {
+        ListNode l1 = Helper.getTestListNode();
+        Helper.printList(l1);
+        ListNode sol = swapPairs(l1);
+        Helper.printList(sol);   
+    }
 }
