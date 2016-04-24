@@ -65,7 +65,7 @@ public class CourseSchedule {
     public static int[] findOrder(int numCourses, int[][] prerequisites) {
         
         if(numCourses == 0 || prerequisites == null || prerequisites.length==0){
-            return null;
+            return new int[0];
         }
         
         int[] sol = new int[numCourses];
@@ -107,11 +107,13 @@ public class CourseSchedule {
         }
 //        System.out.println(Arrays.toString(sol));
         if( count == numCourses) return sol;
-        return null;
+        return new int[0];
     }
     
     public static void main(String[] args) {
         int[][] test = {{1,0},{2,0},{3,1},{3,2}};
-        findOrder( 4, test );   
+        int[] sol = findOrder( 4, test );   
+        System.out.println(Arrays.toString(sol));
+        Assert.assertTrue(sol == {1,2,3,4} )
     }
 }
