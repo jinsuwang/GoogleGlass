@@ -40,6 +40,9 @@ public class WordLadderII {
         
         bfs( map, distance, beginWord, endWord, wordList );
         List<String> path = new ArrayList<String>();
+        
+        printMap( map );
+        printDistance( distance );
                 
         dfs( ladders, path, endWord, beginWord, distance, map );
         return ladders;

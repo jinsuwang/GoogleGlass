@@ -47,9 +47,26 @@ public class myBinarySearch {
     }
     
     
+    public static int binarySearch3( int[] arr, int val){
+        int left = 0;
+        int right = arr.length - 1;
+        while( left <= right ){
+            int mid = left + ( right - left ) / 2;
+            if( arr[mid] == val ) return mid;
+            else if( arr[mid] < val ){
+                left = mid + 1;
+            }else{
+                right = mid - 1;
+            }
+        
+        }
+        return -1;
+    }
+    
+    
     public static void main(String[] args) {
         int[] test = { 1,1,1,2,3 };
-        int ret = binarySearch2(test, 1);
+        int ret = binarySearch3(test, 3);
         System.out.println(ret);
     }
 }
