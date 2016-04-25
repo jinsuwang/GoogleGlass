@@ -27,30 +27,6 @@ public class WordBreakII {
         return formatResult(sol);
     }
 
-    public static ArrayList<String> dfs(String s, Set<String> dict, Map<String, ArrayList<String>> memo){
-        if(memo.containsKey(s)) return memo.get(s);
-        ArrayList<String> result = new ArrayList<String>();
-        int n = s.length();
-        if(n <= 0) return result;
-        for(int len = 1; len <= n; ++len){
-            String subfix = s.substring(0,len);
-            if(dict.contains(subfix)){
-                if(len == n){
-                    result.add(subfix);
-                }else{
-                    String prefix = s.substring(len);
-                    ArrayList<String> tmp = dfs(prefix, dict, memo);
-//                    for(String item:tmp){
-//                        item = subfix + " " + item;
-//                        result.add(item);
-//                    }
-                }
-            }
-        }
-        memo.put(s, result);
-        System.out.println(s + Arrays.toString(result.toArray()));
-        return result;
-    }
     
     private static void dfs2(String s, Set<String> dict, List<List<String>> sol,
             List<String> curr, int index) {
@@ -83,6 +59,32 @@ public class WordBreakII {
         return ret;
     }
     
+    
+    
+    public static ArrayList<String> dfs(String s, Set<String> dict, Map<String, ArrayList<String>> memo){
+        if(memo.containsKey(s)) return memo.get(s);
+        ArrayList<String> result = new ArrayList<String>();
+        int n = s.length();
+        if(n <= 0) return result;
+        for(int len = 1; len <= n; ++len){
+            String subfix = s.substring(0,len);
+            if(dict.contains(subfix)){
+                if(len == n){
+                    result.add(subfix);
+                }else{
+                    String prefix = s.substring(len);
+                    ArrayList<String> tmp = dfs(prefix, dict, memo);
+//                    for(String item:tmp){
+//                        item = subfix + " " + item;
+//                        result.add(item);
+//                    }
+                }
+            }
+        }
+        memo.put(s, result);
+        System.out.println(s + Arrays.toString(result.toArray()));
+        return result;
+    }
     
     public static void main(String[] args) {
         String s = "catsanddog";
