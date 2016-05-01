@@ -28,7 +28,7 @@ public class WiggleSort {
             if( i%2 == 1 && nums[i] < nums[i+1]){
                 swap( nums, i, i+1 );
             }
-            System.out.println(Arrays.toString(nums));
+//            System.out.println(Arrays.toString(nums));
         }
     }
 
