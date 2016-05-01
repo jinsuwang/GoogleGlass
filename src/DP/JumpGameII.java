@@ -26,7 +26,7 @@ public class JumpGameII {
         return steps;
     }
     public static void main(String[] args) {
-        int[] test = { 2, 1 };
+        int[] test = {  1 };
         System.out.println(jump(test));
     }
     

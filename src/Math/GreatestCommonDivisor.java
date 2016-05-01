@@ -35,7 +35,10 @@ public class GreatestCommonDivisor {
         for( int i = 1; i < arr.length; i++ ){
             int m = arr[i];
             // m is the divident, ret is divisor
+            
             while( m % ret != 0 ){
+                System.out.println( "m: " + m + " ret: "  + ret);
+
                 int tmp = ret;
                 ret = m % ret;
                 m = tmp;
@@ -45,7 +48,7 @@ public class GreatestCommonDivisor {
     }
    
     public static void main(String[] args) {
-        int[] testArr = {12,15};
-        System.out.println( getGCDRcur(testArr) );
+        int[] testArr = {13,3,9};
+        System.out.println( getGCDLoop(testArr) );
     }
 }

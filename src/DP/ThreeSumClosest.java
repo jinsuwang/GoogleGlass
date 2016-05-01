@@ -42,8 +42,13 @@ public class ThreeSumClosest {
     }
     
     public static void main(String[] args) {
-        int[] test = {-1, 2, 1, -4};
-        int target = 1;
-        System.out.println( threeSumClosest(test,target) );
+//        int[] test = {-1, 2, 1, -4};
+//        int target = 1;
+//        System.out.println( threeSumClosest(test,target) );
+
+
+        byte a = -129;
+        System.out.println(a);
+
     }
 }

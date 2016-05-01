@@ -5,13 +5,15 @@
  */
 package DP;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Sam
  */
 public class DistinctSubsequences {
     
-    public int numDistinct(String s, String t) {
+    public static int numDistinct(String s, String t) {
         if( s == null || t == null ) return 0;
         int lenS = s.length();
         int lenT = t.length();
@@ -33,6 +35,16 @@ public class DistinctSubsequences {
                 }
             }
         }
+        for(int[] e : cache){
+            System.out.println(Arrays.toString(e));
+        }
         return cache[lenS][lenT];
+    }
+    
+    public static void main(String[] args) {
+        
+        String a = "rabbbit";
+        String b = "rabbit";
+        numDistinct( a, b );
     }
 }

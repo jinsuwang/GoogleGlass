@@ -5,6 +5,7 @@
  */
 package Heap;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -16,20 +17,25 @@ public class MinHeap {
     
     public static void main(String[] args) {
         
-        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1.compareTo(o2);
-            }
-        });
+//        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
+//            @Override
+//            public int compare(Integer o1, Integer o2) {
+////                return o1.compareTo(o2);
+//                return o1 - o2;
+//            }
+//        });
+//        
+//        pq.add(1);
+//        pq.add(2);
+//        pq.add(3);
+//        pq.add(4);
+//        pq.add(5);
+//        
+//        System.out.println(pq.poll());
         
-        pq.add(1);
-        pq.add(2);
-        pq.add(3);
-        pq.add(4);
-        pq.add(5);
-        
-        System.out.println(pq.poll());
+        byte a = 19;
+        System.out.println((int)a);
+//        Collections.reverse( new int[]{1,2,3,4} );
 
     }
     

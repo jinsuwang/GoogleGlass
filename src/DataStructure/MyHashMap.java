@@ -43,7 +43,7 @@ public class MyHashMap<K,V> {
         node = new LinkedListNode<K,V>(key,value);
         int index = getIndexForKey(key);
         if( arr.get(index) != null ){
-            node.next = node;
+            node.next = arr.get(index);
             node.next.prev = node;
         }
         arr.set(index, node);

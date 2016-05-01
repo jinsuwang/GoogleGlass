@@ -41,7 +41,7 @@ public class TopKthRepeatingNumber {
         Queue<Entry<Integer, Integer>> pq = new PriorityQueue<Entry<Integer, Integer>>(k+1, 
                 new Comparator<Entry<Integer, Integer>>(){
             public int compare( Entry<Integer,Integer> e1,  Entry<Integer,Integer> e2 ) {
-                // Max Heap
+                // Min Heap
                 return e1.getValue() - e2.getValue();
             }
         });
@@ -65,7 +65,7 @@ public class TopKthRepeatingNumber {
     }
     
     public static void main(String[] args) {
-        int[] test = { 1,1,1,1,1,1,2,2,2,2,3,3,3,3,3,3,3 };
+        int[] test = { 1,1,1,1,1,1,1,1,1,2,2,2,3,3,3,3,3,3,3 };
         List<Integer> ret = kth(test, 2);
         System.out.println(ret.toString());
     }
