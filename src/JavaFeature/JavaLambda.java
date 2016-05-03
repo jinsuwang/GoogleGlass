@@ -3,22 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JAVA;
-
-import java.util.Vector;
+package JavaFeature;
 
 /**
  *
  * @author Sam
  */
-public class JavaVector {
+public class JavaLambda {
     
     public static void main(String[] args) {
-        Vector v = new Vector();
-        v.add("this is a string");
-        v.add(3);
         
-        System.out.println(v.toString());
+        new Thread(() -> System.out.println("hello lambda")).start();
+
     }
     
 }

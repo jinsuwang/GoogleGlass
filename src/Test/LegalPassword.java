@@ -3,22 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JAVA;
+package Test;
 
 /**
  *
  * @author Sam
  */
-public class Son2 extends Father {
-    
-    Son2(int x) {
-        super(x);
-    }
-
-    
-    public void sing(){
-        System.out.println( "Son is singing");
-    }
+public class LegalPassword {
     
     
 }

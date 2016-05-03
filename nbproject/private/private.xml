@@ -4,18 +4,23 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/BestTimetoBuyandSellStockIII.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/JavaVector.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/ClimbChair.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/JavaVector.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Test/LegalPassword.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/Interval.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/LongestIncreasingPathInAMatrix.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/TwoSum.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/MinimumPathSum.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/UniquePathsII.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/BinaryTreePaths.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Heap/MinHeap.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/RobotEnergy.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/Son2.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/TestSerializable.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Math/Fibonacci.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/SearchAndSort/WiggleSort.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/Son2.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/RemoveNthNodeFromEndofList.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/PrivateConstructor.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/JavaGenerics.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/FindTheDuplicateNumber.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/ThreeSumClosest.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/LRUCacheNode.java</file>
@@ -23,21 +28,27 @@
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/BestTimetoBuyandSellStock.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/ListNode.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DataStructure/ShuffleArray.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/Main.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/JavaLambda.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/SearchAndSort/myBinarySearch.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Test/Compression.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/Son.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DesignPattern/Singleton.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/Main.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/PrivateConstructor.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/MaximumSubarray.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/ShuntingYardAlgorithm.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/LRUCache.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/SearchAndSort/MyPartitionSort.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/UniquePath.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/TwoSumII.java</file>
-            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JAVA/Father.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/Son.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DataStructure/MyHashMap.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/PathSum.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/BestTimetoBuyandSellStockII.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/SearchAndSort/BubbleSort.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DataStructure/MyBigInteger.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/Father.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/BigInteger.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/MovingAverage.java</file>
         </group>
     </open-files>
 </project-private>

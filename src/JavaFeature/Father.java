@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JAVA;
+package JavaFeature;
 
 /**
  *
  * @author Sam
  */
-public class Son extends Father {
-    Son(int x){
-        super(x);
-    }  
+public class Father {
+    public int x;
+    Father( int x ){
+        this.x = x;
+    }
     
     public void say(){
-        System.out.println("I am the son.");
+        System.out.println("I am the father.");
     }
-    
-    public void say(String word){
-        System.out.println("I am the " + word );
+
+    public void sing() {
+        System.out.println("Father is singing");
     }
-   
 }

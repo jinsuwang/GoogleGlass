@@ -32,16 +32,10 @@ public class LongestIncreasingPathInAMatrix {
         return max;
     }
 
-    private static int dfs(int[][] matrix, int i, int j) {
-                
-        
-        
-        System.out.println( "accessing i: "+i+" j: "+j);
-
-        
-        
+    private static int dfs(int[][] matrix, int i, int j) {  
+//        System.out.println( "accessing i: "+i+" j: "+j);
         if( dp[i][j] > 0 ){
-            System.out.println("we have i: " +i + " j:" + j);
+//            System.out.println("we have i: " +i + " j:" + j);
             return dp[i][j];
         }
         int longest = 0;
@@ -55,14 +49,7 @@ public class LongestIncreasingPathInAMatrix {
             longest = Math.max( longest, dfs( matrix,i+1,j));
         if( j < matrix[0].length-1 && matrix[i][j] < matrix[i][j+1])
             longest = Math.max( longest, dfs( matrix,i,j+1));
-        
-        System.out.println( "i: "+i+" j: "+j+" longest: "+longest);
-        
-//        for( int[] e : dp){
-//            System.out.println(Arrays.toString(e));
-//        }
-        
-        
+//        System.out.println( "i: "+i+" j: "+j+" longest: "+longest);    
         dp[i][j] = longest+1;
         return dp[i][j];
     }
@@ -75,9 +62,5 @@ public class LongestIncreasingPathInAMatrix {
         };
         
         System.out.println(longestIncreasingPath(test));
-//        
-//        for( int[] e : dp){
-//            System.out.println(Arrays.toString(e));
-//        }
     }
 }

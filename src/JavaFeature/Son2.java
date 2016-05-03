@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package JAVA;
+package JavaFeature;
 
 /**
  *
  * @author Sam
  */
-public class Main {
+public class Son2 extends Father {
     
-        
-    public static void main(String[] args) {
-    
-        Father s = new Son(3);
-        Father s2 = new Son2(3);
-        
-        s2.sing();
+    Son2(int x) {
+        super(x);
     }
+
+    
+    public void sing(){
+        System.out.println( "Son is singing");
+    }
+    
     
 }

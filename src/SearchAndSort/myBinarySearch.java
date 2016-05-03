@@ -47,6 +47,7 @@ public class myBinarySearch {
     }
     
     
+    // Template 3
     public static int binarySearch3( int[] arr, int val){
         int left = 0;
         int right = arr.length - 1;
