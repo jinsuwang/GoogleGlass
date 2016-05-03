@@ -35,7 +35,7 @@ public class ValidateBinarySearchTree {
         TreeNode curr = root;
         TreeNode prev = null;
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        while( !stack.isEmpty() || root != null ){
+        while( !stack.isEmpty() || curr != null ){
             if( curr != null ){
                 stack.push( curr );
                 curr = curr.left;
