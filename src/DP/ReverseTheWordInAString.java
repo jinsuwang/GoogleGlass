@@ -17,13 +17,14 @@ public class ReverseTheWordInAString {
     public static String reverseWords(String s, char delimiter) {
         int pre = 0;
         char[] sChar = s.toCharArray();
-        System.out.println(Arrays.toString(sChar));
+//        System.out.println(Arrays.toString(sChar));
         for( int i = 0; i < s.length(); i++ ){
             if( s.charAt(i) == delimiter ){
                 swap(sChar, pre, i-1);
                 pre = i + 1;
             }else if( i == s.length()-1 ) swap( sChar, pre, i);
         }
+        swap(sChar, 0, s.length()-1);
         return Arrays.toString(sChar);
     }
 

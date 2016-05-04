@@ -32,7 +32,7 @@ public class MyBlockingQueue{
             }
         }
         
-        msg = queue.remove();
+        msg = queue.poll();
         return msg;
     }
 }
