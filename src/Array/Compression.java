@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Test;
+package Array;
 
 /**
  *
@@ -33,7 +33,6 @@ public class Compression {
                         count++;
                         i++;
                 }
-
                 if( isNumeric == true )
                         sb.append("//");
 
@@ -42,4 +41,9 @@ public class Compression {
         }
         return sb.toString();
     }   
+    
+    public static void main(String[] args) {
+        String sol = convert("aaavbbcc");
+        System.out.println(sol);
+    }
 }
