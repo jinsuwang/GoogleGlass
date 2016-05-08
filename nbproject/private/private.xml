@@ -5,11 +5,15 @@
         <group>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/NoSiblingNode.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/MyThread.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DFSBFS/WallsandGates.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/MissingNumber.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/PathSumII.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/WindowSum.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/InvertBinaryTree.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/ReverseVowelsOfAString.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/TestTree.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DFSBFS/NQueens.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/SlidingWindowMaximum.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Math/Fibonacci.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/MissingRanges.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DFSBFS/GameOfLife.java</file>
@@ -18,6 +22,7 @@
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/ValidateBinarySearchTree.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/LongestConsecutive.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/TrappingRainWater.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/OOD/TicTacToe.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/trailingZeros.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/PlusOne.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/BinaryTreeLongestConsecutiveSequence.java</file>
@@ -27,6 +32,7 @@
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/RotateArray.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/MajorityElement.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/KthSmallestElementiInaBST.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/SearchAndSort/FindPeakElement.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tricky/PascalTriangle.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/TreeNode.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/ZigzagIterator.java</file>
@@ -38,6 +44,7 @@
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/RobotEnergy.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Tree/ScoreGathering.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/JavaFeature/MyRunable.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DFSBFS/ReconstructItinerary.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/StackAndQueue/MyBlockingQueue.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DFSBFS/FlipGameII.java</file>
             <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/CopyListWithRandomPointer.java</file>

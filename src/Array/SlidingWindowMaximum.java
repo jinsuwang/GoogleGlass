@@ -33,6 +33,10 @@ public class SlidingWindowMaximum {
         return max;
     }
     
+    // linear time solution
+    
+    
+    
     public static void main(String[] args) {
         int[] test = {1,3,-1,-3,5,3,6,7};
         int[] sol = maxSlidingWindow(test, 3);
