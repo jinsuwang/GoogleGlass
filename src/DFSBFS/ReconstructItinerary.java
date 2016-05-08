@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 
 /**
  *
@@ -34,8 +35,40 @@ public class ReconstructItinerary {
     }
     
     // Stack( DFS )
+        
+    public static List<String> findItinerary2( String[][] tickets ){
+        Map<String, List<String>> graph = GenerateGraph( tickets ); 
+        Stack<String> stack = new Stack<String>();
+        List<String> sol = new ArrayList<String>();
+        stack.push("JFK");
+        
+        while( !stack.isEmpty() ){
+            while( graph.containsKey(stack.peek()) && !graph.get( stack.peek()).isEmpty() ){
+                stack.push( graph.get(stack.peek()).remove(0) );
+            }
+            sol.add(0, stack.pop());
+        }
+        return sol;
+    }
     
     // backTracing
+    public static List<String> findItinerary3 (String[][] tickets) {
+        Map<String, List<String>> graph = GenerateGraph( tickets ); 
+        List<String> sol = new ArrayList<String>();
+        backtracing(sol, "JFK", graph);
+        return sol;
+    }
+
+    private static void backtracing(List<String> sol, String curr, Map<String, List<String>> graph) {
+        while( graph.containsKey(curr) && !graph.get(curr).isEmpty()){
+            String des = graph.get(curr).remove(0);
+            backtracing( sol, des, graph );
+        }
+        sol.add(0, curr );
+    }
+    
+    
+    
     
     private static Map<String, List<String>> GenerateGraph(String[][] tickets) {
         Map<String, List<String>> map = new HashMap<String,List<String>>();
@@ -90,7 +123,8 @@ public class ReconstructItinerary {
             {"ATL","SFO"}
         };
         
-        List<String> sol = findItinerary(itinerary2);
+        List<String> sol = findItinerary2(itinerary2);
         System.out.println(sol.toString());
     }
+
 }

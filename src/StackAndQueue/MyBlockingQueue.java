@@ -35,4 +35,8 @@ public class MyBlockingQueue{
         msg = queue.poll();
         return msg;
     }
+    
+    
+    // fine-grain using lock
+   
 }
