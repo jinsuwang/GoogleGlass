@@ -2,6 +2,7 @@ package Tree;
 
 import Amazon.*;
 import java.util.* ;
+import java.util.Map.Entry;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -185,11 +186,43 @@ public class TreeTraversal {
 
         return result;
     }
+      
+      
+    public static List<List<Integer>> verticalOrder(TreeNode root) {
+        Map<Integer, List<Integer>> map = new TreeMap<Integer, List<Integer>>();
+        vdfs( root, map, 0 );
+        List<List<Integer>> sol = new ArrayList<List<Integer>>();
+        for( Integer e : map.keySet() ){
+            sol.add( map.get(e) );
+        }
+        return sol;
+    }
+    
+    private static void vdfs(TreeNode root, Map<Integer, List<Integer>> map, int offset) {
+        if( root == null ) return;
+        if( !map.containsKey(offset) ){
+            List<Integer> tmp = new ArrayList<Integer>();
+            tmp.add(root.val);
+            map.put(offset, tmp);
+        }else{
+            List<Integer> tmp = map.get(offset);
+            tmp.add(root.val);
+            map.put(offset, tmp);
+        }
+        vdfs( root.left, map, offset-1);
+        vdfs( root.right, map, offset+1);
 
+    }
     
     public static void main(String[] args) {
         TreeNode root = TestTree.getTestTree();
-        List<Integer> list = postOrderTreaversalIter( root );
-        System.out.println( list.toString() );
+//        List<Integer> list = postOrderTreaversalIter( root );
+//        System.out.println( list.toString() );
+
+        List<List<Integer>> sol = verticalOrder(root);
+        for( List<Integer> e : sol ){
+            System.out.println(e.toString());
+        }
+        
     }
 }
