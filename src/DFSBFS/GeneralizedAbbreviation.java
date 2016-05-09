@@ -32,12 +32,12 @@ public class GeneralizedAbbreviation {
         else {
             //choose to abbr word[pos]
             dfs(pos+1, word, sb, count+1, res);
-            
             //choose not to abbr word[pos]
             //first append previous count to sb if count>0
             if (count > 0) sb.append(count);
             sb.append(word[pos]);
             dfs(pos+1, word, sb, 0, res);
+//            sb.deleteCharAt(sb.length()-1)
         }
         sb.setLength(sbOriginSize);
     }
@@ -45,5 +45,9 @@ public class GeneralizedAbbreviation {
     public static void main(String[] args) {
         List<String> sol = generateAbbreviations("word");
         System.out.println( sol.toString() );
+//        StringBuffer sb = new StringBuffer();
+//        sb.append("123");
+//        sb.setLength(1);
+//        System.out.println(sb.toString());
     }
 }
