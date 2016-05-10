@@ -50,8 +50,10 @@ public class ContainsDuplicate {
             if ((floor != null && floor >= nums[i]) || (ceiling != null && ceiling <= nums[i])) {
                 return true;
             }
- 
-            
+            set.add(nums[i]);
+            if( i >= k ){
+                set.remove(nums[i-k]);
+            }
         } 
         return false;
     }
