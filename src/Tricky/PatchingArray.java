@@ -10,7 +10,7 @@ package Tricky;
  * @author Sam
  */
 public class PatchingArray {
-    public int minPatches(int[] nums, int n) {
+    public static int minPatches(int[] nums, int n) {
    
         int miss = 1, added = 0, i = 0;    
         while( miss <= n ){
@@ -22,5 +22,9 @@ public class PatchingArray {
             }
         }
         return added;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println( minPatches( new int[]{1,3}, 6 ) );
     }
 }
