@@ -32,7 +32,7 @@ public class RemoveDuplicateLetters {
             System.out.println(stack.toString());
             if( visited[c-'a'] ) continue;
             
-            while( !stack.isEmpty() && stack.peek() > c && count[stack.peek()-'a'] > 0 ){
+            while( !stack.isEmpty() && stack.peek() > c && count[stack.peek()-'a'] > 0 ){ // not last one and 
                 visited[stack.peek()-'a'] = false;
                 stack.pop();
             }

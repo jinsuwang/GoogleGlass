@@ -5,6 +5,9 @@
  */
 package LinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Sam
@@ -20,7 +23,6 @@ public class DeleteDuplicates {
                 curr = curr.next;
             }
         }
-
         return head;
     }
     
@@ -45,6 +47,37 @@ public class DeleteDuplicates {
         return dummy.next;
     }
     
+    // unsorted list
+    public static ListNode deleteDuplicate3( ListNode head ){
+        Set<Integer> set = new HashSet<Integer>();
+        ListNode prev = head;
+        ListNode sol = head;
+        
+        while( head != null ){
+            if( set.contains(head.val)){
+                prev.next = head.next;   
+            }else{
+                prev = head;
+                set.add(head.val);
+            }
+            head = head.next;
+        }
+        return sol;
+    }
     
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(3);
+        ListNode l3 = new ListNode(3);
+        ListNode l4 = new ListNode(3);
+        ListNode l5 = new ListNode(5);
+        ListNode l6 = new ListNode(7);
+        ListNode l7 = new ListNode(7);
+
+        l1.next = l2; l2.next = l3; l3.next =l4; l4.next =l5; l5.next =l6; l6.next= l7;
+ 
+        ListNode sol = deleteDuplicate3(l1);
+        Helper.printList(sol);
+    }
     
 }
