@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class GenerateParentheses {
     
-    public List<String> generateParenthesis(int n) {
+    public static List<String> generateParenthesis(int n) {
         
         ArrayList<String> result = new ArrayList<String>();
         if (n <= 0) {
@@ -24,7 +24,7 @@ public class GenerateParentheses {
         return result;
     }
     
-    public void dfs(ArrayList<String> result, String paren, // current paren
+    public static void dfs(ArrayList<String> result, String paren, // current paren
             int left, int right) {  // how many right paren we need to add
 	if (left == 0 && right == 0) {
             result.add(paren);
@@ -37,5 +37,10 @@ public class GenerateParentheses {
         if (right > 0 && left < right) {
             dfs(result, paren + ")", left, right - 1);
         }
+    }
+    
+    public static void main(String[] args) {
+        List<String>  sol = generateParenthesis(3);
+        System.out.println(sol.toString());
     }
 }

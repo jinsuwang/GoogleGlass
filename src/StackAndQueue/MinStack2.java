@@ -44,4 +44,15 @@ public class MinStack2 {
         return minValue;
     }
     
+    public static void main(String[] args) {
+        MinStack stack =new MinStack();
+        
+        stack.push(5);
+        System.out.println(stack.getMin());
+        stack.push(3);
+        System.out.println(stack.getMin());
+        System.out.println(stack.top());
+
+    }
+    
 }

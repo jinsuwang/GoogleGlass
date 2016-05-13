@@ -54,6 +54,9 @@ public class CopyListWithRandomPointer {
         return dummy.next;
     }
     
+    
+    
+    
     public RandomListNode copyRandomList2(RandomListNode head) {
         if( head == null ) return null;
         copyNext(head);

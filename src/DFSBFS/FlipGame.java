@@ -29,7 +29,6 @@ public class FlipGame {
     
     
     
-    
     public static void main(String[] args) {
          List<String> sol = generatePossibleNextMoves("++++");
          System.out.println(sol.toString());

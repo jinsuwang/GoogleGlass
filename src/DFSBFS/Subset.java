@@ -26,9 +26,9 @@ public class Subset {
     private static void dfs(List<List<Integer>> sol, int[] nums, List<Integer> curr, int index) {
         sol.add( new ArrayList( curr ));
         for( int i = index; i < nums.length; i++ ){
-            if ( i != index && nums[i] == nums[i - 1]) {
-                continue;
-            }  
+//            if ( i != index && nums[i] == nums[i - 1]) {
+//                continue;
+//            }  
             curr.add( nums[i]);
             dfs( sol, nums, curr, i+1 );
             curr.remove(curr.size()-1 );
@@ -46,7 +46,7 @@ public class Subset {
     } 
     
     public static void main(String[] args) {
-        int[] test = { 1,2,2 };
+        int[] test = { 1,2,3 };
         List<List<Integer>> sol = subsets(test);
         for( List<Integer> x : sol ){
             System.out.println(x.toString());
