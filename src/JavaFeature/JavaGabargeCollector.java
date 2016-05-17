@@ -9,18 +9,11 @@ package JavaFeature;
  *
  * @author Sam
  */
-public class Father {
-    public int x;
-    Father( int x ){
-        this.x = x;
-    }
+public class JavaGabargeCollector {
     
-    public void say(){
-        System.out.println("I am the father.");
-    }
-
-    public void sing() {
-        System.out.println("Father is singing");
+    
+    public static void main(String[] args) {
+        
     }
     
 }
