@@ -39,11 +39,9 @@ public class IsomorphicStrings{
         return true;
     }
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {      
         System.out.println( isIsomorphic( "egg", "add" ));
         System.out.println( isIsomorphic( "foo", "bar" ));
         System.out.println( isIsomorphic( "paper", "title" ));
-        
     }
 }

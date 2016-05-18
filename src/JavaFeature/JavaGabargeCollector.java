@@ -13,7 +13,11 @@ public class JavaGabargeCollector {
     
     
     public static void main(String[] args) {
-        
+        String s = "hello";
+        System.out.println(Integer.toHexString(s.hashCode()));
+        s = "apple";
+        System.out.println(Integer.toHexString(s.hashCode()));
+    
     }
     
 }
