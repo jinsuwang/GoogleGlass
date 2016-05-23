@@ -21,7 +21,11 @@ public class Fibonacci {
             sol[i] = sol[i-1] + sol[i-2];
         }
         return sol;
-    } 
+    }
+    
+    
+    public static int Fibonacci( int n )
+    
     
     public static void main(String[] args) {
         int[] sol = findFibonacci(5);

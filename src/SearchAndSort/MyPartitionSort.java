@@ -6,6 +6,7 @@
 package SearchAndSort;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -81,6 +82,6 @@ public class MyPartitionSort {
         int[] test = { 1,3,5,2,3,6,3,11,4};
         quickSort(test);
         System.out.println(Arrays.toString(test));
+        Arrays.sort(test); 
     }
-
 }

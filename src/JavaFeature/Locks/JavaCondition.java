@@ -29,6 +29,9 @@ public class JavaCondition {
         
         lock.lock();
         try{
+            if( this.queue == null ){
+                
+            }
             
         }
     
