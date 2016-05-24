@@ -47,8 +47,11 @@ public class MergeKSortedList {
     }   
     
     public static void main(String[] args) {
-        int[] test = {1,2,3,4};
-            Set<Integer> set = new HashSet<Integer>();
+//        int[] test = {1,2,3,4};
+//        Set<Integer> set = new HashSet<Integer>();
+
+        
+        
     }
     
 }

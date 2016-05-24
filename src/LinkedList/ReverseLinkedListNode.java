@@ -10,8 +10,22 @@ package LinkedList;
  * @author Sam
  */
 public class ReverseLinkedListNode {
-    public ListNode reverseList(ListNode head) {
-        return null;
+    public static ListNode reverseList(ListNode head) {
+        
+        if( head == null ){
+            return head;
+        }
+        ListNode current = head;
+        ListNode pre = null;
+
+        while (current != null) {
+            ListNode temp = current.next;
+            current.next = pre;
+            pre = current;
+            current = temp;
+        }
+        return pre;
+//        return head;
     }
     
     public static void reversedPrint( ListNode head ){
@@ -29,7 +43,9 @@ public class ReverseLinkedListNode {
         n2.next = n3;
         n3.next = n4;
         
-        reversedPrint(n1);
+        ListNode n5 = reverseList(n1);
+        Helper.printList(n5);
+        
 
     }
 }

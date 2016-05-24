@@ -96,23 +96,6 @@ public class TreeTraversal {
         ret.add( root.val );
     }
     
-    public static List<Integer> postOrderTreaversalIter( TreeNode root ){
-        List<Integer> ret = new ArrayList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-       
-        while( !stack.isEmpty() || root != null ){
-            if( root != null ){
-                stack.push( root );
-                root = root.left;
-            }else{
-                TreeNode curr = stack.pop();
-                ret.add(curr.val);
-                root = curr.right;
-            }
-        }
-        return ret;
-    }
-    
     
     public static List<Integer> postOrderTraversalIter( TreeNode root ){
         List<Integer> ret = new ArrayList<Integer>();
@@ -139,23 +122,23 @@ public class TreeTraversal {
     
 
     
-    public static ArrayList<String> levelOrderTraversal( ScoreTreeNode root ){
-        ArrayList<String> ret = new ArrayList<>();
-        Queue<ScoreTreeNode> queue = new LinkedList<ScoreTreeNode>();
-        queue.offer(root);
-        while( !queue.isEmpty() ){
-            ScoreTreeNode node = queue.poll();
-            if( node == null ) ret.add("");
-            else{
-                ret.add(node.val+":"+node.count);
-                // leaf node
-                if( node.left == null && node.right == null ) continue;
-                queue.offer(node.left);
-                queue.offer(node.right);
-            }            
-        }
-        return ret;
-    }
+//    public static ArrayList<String> levelOrderTraversal( ScoreTreeNode root ){
+//        ArrayList<String> ret = new ArrayList<>();
+//        Queue<ScoreTreeNode> queue = new LinkedList<ScoreTreeNode>();
+//        queue.offer(root);
+//        while( !queue.isEmpty() ){
+//            ScoreTreeNode node = queue.poll();
+//            if( node == null ) ret.add("");
+//            else{
+//                ret.add(node.val+":"+node.count);
+//                // leaf node
+//                if( node.left == null && node.right == null ) continue;
+//                queue.offer(node.left);
+//                queue.offer(node.right);
+//            }            
+//        }
+//        return ret;
+//    }
     
     
       public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
@@ -215,14 +198,22 @@ public class TreeTraversal {
     }
     
     public static void main(String[] args) {
-        TreeNode root = TestTree.getTestTree();
-//        List<Integer> list = postOrderTreaversalIter( root );
-//        System.out.println( list.toString() );
-
-        List<List<Integer>> sol = verticalOrder(root);
-        for( List<Integer> e : sol ){
-            System.out.println(e.toString());
-        }
+//        TreeNode root = TestTree.getTestTree();
+////        List<Integer> list = postOrderTreaversalIter( root );
+////        System.out.println( list.toString() );
+//
+//        List<List<Integer>> sol = verticalOrder(root);
+//        for( List<Integer> e : sol ){
+//            System.out.println(e.toString());
+//        }
+          
+        TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+        map.put(1, "one");
+        map.put(2, "two");
+        map.put(3, "three");
         
+        Entry<Integer, String> e = map.ceilingEntry(1);
+        System.out.println( e.getKey() );
+
     }
 }
