@@ -3,12 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tree;
+package DFSBFS.SnallWell;
 
 /**
  *
  * @author Sam
  */
-public class ShuntingYardAlgorithm {
+class Well {
     
+    private int depth;
+    
+    Well( int depth ){
+        this.depth = depth;
+    }
+    
+    public int getDepth(){
+       return this.depth;
+    }
 }
