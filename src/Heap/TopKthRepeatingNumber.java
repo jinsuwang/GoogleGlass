@@ -64,9 +64,48 @@ public class TopKthRepeatingNumber {
         return ret;
     }
     
+    public static List<Integer> topKFrequent(int[] nums, int k) {
+        int n = nums.length;
+        HashMap<Integer, Integer> h = new HashMap();
+        for (int i : nums)
+            if (h.containsKey(i))
+                h.put(i, h.get(i) + 1);
+            else
+                h.put(i, 1);
+
+        List<Integer>[] fc = new ArrayList[n + 1];
+        for (int i : h.keySet()) {
+            int f = h.get(i);       //System.out.println(f + " times of " + i);
+            if (fc[f] == null) fc[f] = new ArrayList();
+//            for( int w=0; w < f;w++)
+            fc[f].add(i);
+            System.out.println(fc[f].toString());
+        }
+
+        List<Integer> ans = new ArrayList();
+        for (int i = n, j = 0; k > 0; k--) {
+            for (; fc[i] == null || j == fc[i].size(); j = 0, i--);
+            ans.add(fc[i].get(j++));
+        }
+//        int i = n;
+//        while( k > 0 && i >= 0 ){
+//       
+//            if( fc[i] != null ){
+//                for( int e : fc[i] ){
+//                    ans.add(e);
+//                }
+//                k--;
+//            }
+//            i--;
+//            
+//        }
+
+        return ans;
+    }
+    
     public static void main(String[] args) {
         int[] test = { 1,1,1,1,1,1,1,1,1,2,2,2,3,3,3,3,3,3,3 };
-        List<Integer> ret = kth(test, 2);
+        List<Integer> ret = topKFrequent(test, 2);
         System.out.println(ret.toString());
     }
 }

@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/RotateImage.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/OddEvenLinkedList.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/ReorderList.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/PalindromeLinkedList.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/Array/IntersectionOfTwoArray.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/Helper.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/SwapNodesinPairs.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/DeleteDuplicates.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/DP/CoinChange.java</file>
+            <file>file:/Users/Sam/NetBeansProjects/TechInterview/src/LinkedList/ReverseLinkedListNode.java</file>
+        </group>
     </open-files>
 </project-private>

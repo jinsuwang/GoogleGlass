@@ -20,22 +20,46 @@ public class RobHouse {
     
     */
     
-    public static int findMaximumValue( int[] houses ){
+    public static int findMaximumValue( int[] nums ){
         
-        int[] value = new int[houses.length];
-    
-        value[0] = houses[0];
-        value[1] = houses[1];
-        value[2] = value[0] + houses[2]; 
+        if (nums==null || nums.length == 0) return 0;  
+        if( nums.length == 1) return nums[0];
         
-        for( int i = 3; i < houses.length; i++ ){
-            value[i] = Math.max( value[i-2] + houses[i], houses[i] + value[i-3]);
-        } 
+        int[] dp = new int[nums.length+1];
         
-        System.out.println( Arrays.toString(value) );
+        dp[0] = 0;
+        dp[1] = nums[0];
         
-        return Math.max( value[houses.length-1], value[houses.length-2] );
+        for( int i = 2; i <= nums.length; i++ ){
+            dp[i] = Math.max(dp[i-1], dp[i-2] + nums[i-1]);
+        }
+        return dp[nums.length];
     }
+    
+   
+    public int rob(int[] nums) {
+        
+        if (nums==null || nums.length == 0) return 0;  
+        if( nums.length == 1) return nums[0];
+        
+        int len = nums.length;
+        int[] dp1 = new int[nums.length+1];
+        int[] dp2 = new int[nums.length+1];
+
+        dp1[1] = 0;
+        dp2[1] = nums[0];
+        
+        for( int i = 2; i <= nums.length; i++ ){
+            dp1[i] = Math.max(dp1[i-1], dp1[i-2] + nums[i-1]);
+        }
+        for( int i = 2; i <= nums.length-1; i++ ){
+            dp2[i] = Math.max(dp2[i-1], dp2[i-2] + nums[i-1]);
+        }
+        
+        return Math.max(dp1[len], dp2[len-1]);
+    }
+    
+    
     
     public static void main(String[] args) {
         int[] test =  {  2 ,3, 2, 4, 6, 8 };
