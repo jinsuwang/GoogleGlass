@@ -26,6 +26,7 @@ public class SearchInRotatedSortedArray {
                     left = mid + 1;
                 }else{
                     right = mid - 1;
+
                 }
             }
             
@@ -40,8 +41,44 @@ public class SearchInRotatedSortedArray {
         return -1;
     }
     
+    
+    
+    // follow up, allow duplication   
+    public static boolean search2(int[] nums, int target) {
+        
+        int left = 0;
+        int right = nums.length - 1;
+        
+        while( left <= right ){
+            int mid = left + ( right - left ) / 2;
+            
+            if( target == nums[mid] ) return true;
+            
+            else if( nums[left] < nums[mid] ){ // left is sorted.
+                if( nums[mid] < target || target < nums[left] ){ // target in left part. 
+                    left = mid + 1;
+                }else{
+                    right = mid - 1;
+
+                }
+            }
+            
+            else if( nums[left] > nums[mid] ){ // right is sorted 
+                if( target < nums[mid] || target > nums[right] ){
+                    right = mid - 1;
+                }else{
+                    left = mid + 1;
+                }
+            }else{
+                left++;
+            }
+        }
+        return false;
+    }
+    
+    
     public static void main(String[] args) {
-        int[] test = { 3,4,5,1,2 };
-        System.out.println( search(test, 1) );
+        int[] test = { 1,3,1,1,1 };
+        System.out.println( search2(test, 3) );
     }
 }

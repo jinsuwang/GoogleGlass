@@ -6,6 +6,7 @@
 package DFSBFS;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,8 +28,9 @@ public class Permutation {
             sol.add(new ArrayList<Integer>( curr ));
             return;
         }
+       
         for( int i = 0; i < nums.length; i++ ){
-            if( used[i] == true ) continue;
+            if( used[i] ) continue;
             used[i] = true;
             curr.add( nums[i] );
             dfs(sol, used, curr, nums);
@@ -36,6 +38,55 @@ public class Permutation {
             curr.remove(curr.size()-1);
         }
     }    
+    
+    
+    // follow Up: Unique permutation
+    public static List<List<Integer>> permuteUnique(int[] nums) {
+        List<List<Integer>> sol = new ArrayList<List<Integer>>();
+        boolean[] used = new boolean[nums.length];
+        Arrays.sort(nums);
+        dfsUnique( sol, used, new ArrayList<Integer>(),  nums );
+        return sol;
+    }
+
+    private static void dfsUnique(List<List<Integer>> sol, boolean[] used, List<Integer> curr, int[] nums) {
+ 
+        
+        if( curr.size() == nums.length  ){
+            sol.add(new ArrayList<Integer>( curr ));
+            return;
+        }
+       
+        for( int i = 0; i < nums.length; i++ ){
+            
+            // prev should be used. 
+            if( used[i] || ( i != 0 && used[i-1] && nums[i] == nums[i-1]) ) {
+                continue;
+            }
+            
+            
+            used[i] = true;
+            curr.add( nums[i] );
+            dfsUnique(sol, used, curr, nums);
+            used[i] = false;
+            curr.remove(curr.size()-1);
+        }
+    }     
+    
+      
+    public static void main(String[] args) {
+        int[] test = { 1,1,2 };
+        List<List<Integer>> sol = permuteUnique( test );
+        for( List<Integer> e : sol ){
+            System.out.println(e);
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     
    public static String findsentence( String s ){
@@ -78,9 +129,5 @@ public class Permutation {
     }
     return sb.toString();
 }
-    
    
-    public static void main(String[] args) {
-        String s = "   a    bc dddd     ";
-    }
 }
