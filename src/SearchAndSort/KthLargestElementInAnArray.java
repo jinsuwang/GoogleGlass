@@ -22,7 +22,7 @@ public class KthLargestElementInAnArray {
     
     private static int helper(int[] nums, int l, int r, int k){
         if( l == r ) return nums[l];
-        int position = partition( nums, l, r);
+        int position = partition2( nums, l, r);
         System.out.println(Arrays.toString(nums));
         if( position + 1 == k ){
             return nums[position];
@@ -40,7 +40,7 @@ public class KthLargestElementInAnArray {
     }
     
     
-    private static int partition(int[] arr, int left, int right) {
+    private static int partition2(int[] arr, int left, int right) {
         int i = left;
         int j = right;
 //        Random ran = new Random();
@@ -58,7 +58,7 @@ public class KthLargestElementInAnArray {
     }
     
 
-    private static int partition2(int[] nums, int l, int r) {
+    private static int partition(int[] nums, int l, int r) {
         if( l == r ){
             return l;
         }   
@@ -68,25 +68,19 @@ public class KthLargestElementInAnArray {
             // find first element smaller curr from right
             while( left < right && nums[right] >= curr) right--;
             nums[left] = nums[right];
-            
-            System.out.println("left " + left + " right " + right );
+//            System.out.println("left " + left + " right " + right );
             
             while( left < right && nums[left] <= curr ) left++;
-                        
-            System.out.println("left " + left + " right " + right );
- 
+            //System.out.println("left " + left + " right " + right );
             nums[right] = nums[left];
-            
-            System.out.println(Arrays.toString(nums));
         }
         nums[left] = curr;
         return left;   
     }
     
     public static void main(String[] args) {
-//        int[] test = { 3,2,6,5,1 };
-        int[] test = { 3,1,2,4 };
-
+        int[] test = { 3,2,6,5,1 };
+//        int[] test = { 3,1,2,4 };
         System.out.println( findKthLargest( test,  2));
     }
 }
