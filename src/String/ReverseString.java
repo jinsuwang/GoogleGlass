@@ -11,7 +11,7 @@ package String;
  */
 public class ReverseString {
     
-    public static String reverseWords( String s ){
+    public static String reverseWords2( String s ){
         if (s == null) {
             return s;
         }
@@ -36,30 +36,41 @@ public class ReverseString {
                 i++;
             }
             end = i;
-            reverseString(chars, first, end);
+            reverse(chars, first, end);
             i++;
         }
+        reverse(chars, 0, len - 1);
 
-        reverseString(chars, 0, len - 1);
-
-        return String.valueOf(chars).trim();
+        return String.valueOf(chars);
     
     }
     
     
     public static void main(String[] args) {
-        String sentence = "the skyline is blue";
-        System.out.println( "<"+reverseWords( sentence )+">");
+        String sentence = "the skyline is blue     ";
+        System.out.println( reverseWords( sentence ));
     }
     
     
-    
-    private static void reverseString(char[] cArr, int left, int right ){
-        
-        if (cArr == null || left >= right || right >= cArr.length) {
-            return;
+    public static String reverseWords(String str) {
+        char[] s = str.toCharArray();
+        reverse(s, 0, s.length - 1);
+        int start = 0;
+        int end = -1;
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                reverse(s, start, i - 1);
+                start = i + 1;
+            }
         }
-        
+        // 3, reverse the last word, if there is only one word this will solve the corner case
+        reverse(s, start, s.length - 1);
+        return new String(s);
+    }
+
+    
+    
+    private static void reverse(char[] cArr, int left, int right ){
         while( left <= right ){
             char tmp = cArr[left];
             cArr[left] = cArr[right];
@@ -67,5 +78,22 @@ public class ReverseString {
             left++;
             right--;
         }
+    }
+    
+    
+    public static String reverseWords( char[] s ){
+        reverse(s, 0, s.length - 1);
+        // 2, reverse each word
+        int start = 0;
+        int end = -1;
+        for (int i = 0; i < s.length; i++) {
+            if (s[i] == ' ') {
+                reverse(s, start, i - 1);
+                start = i + 1;
+            }
+        }
+        // 3, reverse the last word, if there is only one word this will solve the corner case
+        reverse(s, start, s.length - 1);
+        return new String(s);
     }
 }
