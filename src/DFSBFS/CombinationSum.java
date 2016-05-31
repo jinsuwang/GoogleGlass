@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class CombinationSum {
     
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> ret = new ArrayList<List<Integer>>();
         if (candidates == null || candidates.length == 0) {
             return ret;
@@ -26,7 +26,7 @@ public class CombinationSum {
         return ret;
     }
     
-    public void dfs(int[] candidates, int target, List<Integer> path, List<List<Integer>> ret, int index) {
+    public static void dfs(int[] candidates, int target, List<Integer> path, List<List<Integer>> ret, int index) {
         if (target < 0) {
             return;
         }
@@ -79,9 +79,11 @@ public class CombinationSum {
         int prev = -1;
         for (int i = index; i < candidates.length; i++) {
             int num = candidates[i];
+//            System.out.println("prev: " + prev);
             if( num == prev ) continue;
             prev = num;
             path.add(num);
+            
             // 注意，最后的参数是i，不是index!!
             dfsUnique(candidates, target - num, path, ret, i+1);
             path.remove(path.size() - 1);

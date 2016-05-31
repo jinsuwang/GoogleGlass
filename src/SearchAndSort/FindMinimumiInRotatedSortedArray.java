@@ -28,6 +28,7 @@ public class FindMinimumiInRotatedSortedArray {
                 return nums[right];
             }
             
+            // minimum is in the right part
             if( nums[mid] > nums[left]){ // left is sorted
                 left = mid; 
             }else{
@@ -46,24 +47,20 @@ public class FindMinimumiInRotatedSortedArray {
         while( left < right ){
             
             int mid = left + ( right - left ) / 2;
-            
-//            if( nums[mid] >= nums[left] && nums[right] >= nums[mid] ){ // no roatation 
-//                return nums[left];
-//            }
-            
+              
             if( left + 1 == right ){
                 return Math.min(nums[left], nums[right]) ;
             }
             
-            if( nums[right] > nums[mid]){ // left is sorted
-                right = mid; 
-            }else if( nums[left] < nums[mid] ){
-                left = mid;
+            if( nums[right] == nums[mid]){ // left is sorted
+                right-- ; 
+            }else if( nums[mid] < nums[right] ){
+                right = mid;
             }else{
-                left++;
+                left = mid;
             }
         }     
-        return nums[left];
+        return nums[right];
     }
     
     
