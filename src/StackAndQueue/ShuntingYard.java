@@ -11,7 +11,7 @@ import java.util.Stack;
  *
  * @author Sam
  */
-public class ShuntingYang {
+public class ShuntingYard {
     
     public int evaluate( String str ){
         char[] tokens = str.toCharArray();
@@ -20,7 +20,7 @@ public class ShuntingYang {
         Stack<Character> ops = new Stack<Character>();
         
         for( int i=0; i < tokens.length; i++ ){
-            if(tokens[i] == ' ') continue;
+            if( tokens[i] == ' ' ) continue;
             if (tokens[i] >= '0' && tokens[i] <= '9')
             {
                 StringBuffer sbuf = new StringBuffer();

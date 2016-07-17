@@ -40,7 +40,7 @@ public class MyPartitionSort {
         int curr = nums[left];
         while(left < right ){
             while( left < right && nums[right] >= curr) right--;
-            nums[left] = nums[right];            
+            nums[left] = nums[ right ];            
             while( left < right && nums[left] <= curr ) left++;
             nums[right] = nums[left];
         }

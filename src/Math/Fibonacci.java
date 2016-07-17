@@ -24,8 +24,24 @@ public class Fibonacci {
     }
     
     
-    public static int Fibonacci( int n )
-    
+   //Iteration method
+    static int fibIteration(int n) {
+        int x = 0, y = 1, z = 1;
+        for (int i = 0; i < n; i++) {
+            x = y;
+            y = z;
+            z = x + y;
+        }
+        return x;
+    }
+
+    //Recursive method
+    static int fibRecursion(int  n) {
+        if ((n == 1) || (n == 0)) {
+            return n;
+        }
+        return fibRecursion(n - 1) + fibRecursion(n - 2);
+    }    
     
     public static void main(String[] args) {
         int[] sol = findFibonacci(5);

@@ -3,21 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LinkedList;
+package Company;
 
 /**
  *
  * @author Sam
  */
-public class ListNode {
-    public int val;
-    public ListNode next;
-    public ListNode( int x ){
-        val = x;
-//        add();
+class Process{
+    public int excuteTime;
+    public int arriveTime;
+    Process( int arrTime, int excTime ){
+        this.excuteTime = excTime;
+        this.arriveTime = arrTime;
     }
-    
-    public void add(){ System.out.println("xxx");}
 }
-
 

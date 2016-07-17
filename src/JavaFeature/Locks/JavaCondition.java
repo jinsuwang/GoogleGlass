@@ -26,18 +26,6 @@ public class JavaCondition {
     int count;
     
     public void put( Object x ){
-        
-        lock.lock();
-        try{
-            if( this.queue == null ){
-                
-            }
-            
-        }
     
-    
-    }
-    
-    
-    
+    }    
 }

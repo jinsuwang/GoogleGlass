@@ -32,6 +32,7 @@ public class SlidingWindowMaximum {
         int max = Integer.MIN_VALUE;
         for( int j = 0; j < k; j++ ){
             max = Math.max( nums[i+j],max );
+           
         }
         return max;
     }

@@ -36,6 +36,8 @@ public class WordLadder {
         Set<String> visited = new HashSet<String>(); // memory.
         Queue<String> queue = new LinkedList<String>(); 
         int length = 1;
+        
+        
         while( !queue.isEmpty() ){
             length++;
             int size = queue.size(); // don't use queue.size() in the expression, it is dynamic.

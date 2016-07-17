@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Sam
  */
-public class MergeIntervals {
+  public class MergeIntervals {
     
     public static List<Interval> merge(List<Interval> intervals) {
                 

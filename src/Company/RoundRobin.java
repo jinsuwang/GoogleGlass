@@ -1,4 +1,4 @@
-package Amazon;
+package Company;
 
 //public static float waitingTimeRobin(int[] arrival,int[] run, int q) 
 import java.util.Queue;

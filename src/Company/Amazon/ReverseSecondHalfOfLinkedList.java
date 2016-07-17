@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Amazon;
+package Company.Amazon;
 
 import LinkedList.ListNode;
 
@@ -17,7 +17,7 @@ public class ReverseSecondHalfOfLinkedList {
             return head;
         }
         // find mid
-        ListNode fast = head.next;
+        ListNode fast = head;
         ListNode slow = head;
         while( fast.next != null && fast.next.next != null ){
             fast = fast.next.next;

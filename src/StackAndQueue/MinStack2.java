@@ -30,7 +30,7 @@ public class MinStack2 {
     public void pop() {
         int x = stack.pop();
         if( x < 0 ){
-            minValue = minValue - x;
+            minValue = minValue - x; 
         }
     }
 

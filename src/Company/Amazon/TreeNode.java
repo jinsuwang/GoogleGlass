@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Amazon;
+package Company.Amazon;
 
 /**
  *
  * @author Sam
  */
-class Process{
-    public int excTime;
-    public int arrTime;
-    Process( int arrTime, int excTime ){
-        this.excTime = excTime;
-        this.arrTime = arrTime;
+class TreeNode {
+    
+    String val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode( String val ){
+        this.val = val;
+        left = null;
+        right = null;
     }
+    
 }
-
