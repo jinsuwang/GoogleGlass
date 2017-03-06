@@ -38,8 +38,7 @@ public class MinimumHeightTrees {
     }
     
     private void dfs(List<Integer> sol, List<Integer> curr, Map<Integer, List<Integer>> graph) {
-        
-        if( graph.  )
+
         
     }
 

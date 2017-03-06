@@ -5,6 +5,8 @@
  */
 package DataStructure;
 
+import Tricky.BigInteger;
+
 /**
  *
  * @author Sam
@@ -73,7 +75,7 @@ public class MyBigInteger {
      *            another <code>BigInteger</code> object 
      * @return this+another 
      */
-    public MyBigInteger add(BigInteger another) { 
+    public MyBigInteger add(BigInteger another) {
         // YOU FILL THIS IN 
     } 
   
@@ -118,7 +120,8 @@ public class MyBigInteger {
      * @return this*another 
      */
     public BigInteger multiply(BigInteger another) { 
-        // YOU FILL THIS IN 
+        // YOU FILL THIS IN
+        return null;
     } 
   
     /** 
@@ -129,7 +132,8 @@ public class MyBigInteger {
      * @return this*num 
      */
     public BigInteger multiply(int num) { 
-        // YOU FILL THIS IN 
+        // YOU FILL THIS IN
+        return null;
     } 
   
     public String toString() { 
@@ -142,13 +146,5 @@ public class MyBigInteger {
         } 
         return buf.toString(); 
     } 
-  
-    public static void main(String[] args) { 
-        BigInteger i1 = new BigInteger("999999999999999999"); 
-        BigInteger i2 = i1.add(1); 
-        System.out.println(i2); // the output should be 1000000000000000000 
-        BigInteger i3 = i2.multiply(i1); 
-        System.out.println(i3); // expected: 999999999999999999000000000000000000 
-        System.out.println(i3.subtract(-3)); // expected: 999999999999999999000000000000000003 
-    } 
+
 }

@@ -23,18 +23,18 @@ public class ShortedJobFirst {
         int currTime = 0;
         PriorityQueue<Process> heap = new PriorityQueue<>(new Comparator<Process>(){
             public int compare(Process p1, Process p2){
-                if( p1.excTime == p2.excTime ){
-                    return p1.arrTime - p2.arrTime;
+                if( p1.excuteTime == p2.excuteTime ){
+                    return p1.arriveTime - p2.arriveTime;
                 }
-                return p1.excTime - p2.excTime;
+                return p1.excuteTime - p2.excuteTime;
             }
         });
         while( !heap.isEmpty() || index < len ){
             // fetch the minimum exeTime process
             if( !heap.isEmpty() ){
                 Process curr = heap.poll();
-                waitTime += currTime - curr.arrTime; 
-                currTime += curr.excTime;
+                waitTime += currTime - curr.arriveTime;
+                currTime += curr.excuteTime;
                 while( index < len && currTime >= requestTimes[index]){
                     heap.offer(new Process(requestTimes[index], durations[index++]));
                 } 

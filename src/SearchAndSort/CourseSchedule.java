@@ -5,6 +5,8 @@
  */
 package SearchAndSort;
 
+import com.sun.tools.javac.util.Assert;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -114,6 +116,5 @@ public class CourseSchedule {
         int[][] test = {{1,0},{2,0},{3,1},{3,2}};
         int[] sol = findOrder( 4, test );   
         System.out.println(Arrays.toString(sol));
-        Assert.assertTrue(sol == {1,2,3,4} )
     }
 }

@@ -36,10 +36,5 @@ public class StringtoInteger {
         }
         return sign * result;
     }
-    
-    public static void main(String[] args) {
-        String test = "      -11919730356x";
-        System.out.println(big);
-//        System.out.println(myAtoi(test));
-    }
+
 }

@@ -13,7 +13,4 @@ public class Waiter {
     
     private int employeeId;
     private String name;
-    private int talble 
-    
-    
 }
