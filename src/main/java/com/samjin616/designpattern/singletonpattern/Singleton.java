@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.samjin616.designpattern.singleton_pattern;
+package com.samjin616.designpattern.singletonpattern;
 import static java.lang.System.identityHashCode;
 
 /**
