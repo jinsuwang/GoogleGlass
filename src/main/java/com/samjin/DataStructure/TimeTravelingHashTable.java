@@ -1,4 +1,4 @@
-package DataStructure;
+package com.samjin.DataStructure;
 
 
 import java.util.HashMap;

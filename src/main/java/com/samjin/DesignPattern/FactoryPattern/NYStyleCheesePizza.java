@@ -1,4 +1,4 @@
-package com.samjin.DesignPattern.factorypattern;
+package com.samjin.DesignPattern.FactoryPattern;
 
 /**
  * Created by sjjin on 3/15/17.

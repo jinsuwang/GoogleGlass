@@ -1,4 +1,4 @@
-package com.samjin.DesignPattern.factorypattern;
+package com.samjin.DesignPattern.FactoryPattern;
 
 import java.util.ArrayList;
 import java.util.List;
